@@ -1,0 +1,9 @@
+{
+  "vehicle_info": "VehicleInfo(make='VOLKSWAGEN', model='TOUAREG', year=0, series_description='MK1', vin='WVGZZZ7LZ6D036323', registration='YL55KXS', color='Grey')",
+  "specifications": "VehicleSpecifications(engine=EngineSpecs(fuel_type='Diesel', engine_size=2460, power_bhp=174, power_kw=129.8, number_of_cylinders=5, fuel_system='D DI Turbo Cat Euro 4', aspiration='Turbocharged', fuel_consumption_l_100km=10.1, fuel_consumption_mpg=28.0, torque_ftlb=295.2, torque_nm=400.0), transmission=TransmissionSpecs(type=None, number_of_gears=6), performance=PerformanceSpecs(top_speed_kph=205, top_speed_mph=None), dimensions=DimensionSpecs(length=4754, height=1726, width=1928, wheel_base=2855, unladen_weight=2387), chassis=ChassisSpecs(drive_type='4x4', driving_axle='All Permanent', number_of_axles=2, doors=4), fuel=FuelSpecs(fuel_tank_capacity=100))",
+  "registration_info": "RegistrationInfo(manufacture_date=datetime.datetime(2006, 1, 31, 0, 0, tzinfo=datetime.timezone.utc), first_registration_date=None, last_v5c_issue_date=datetime.datetime(2021, 11, 1, 0, 0, tzinfo=datetime.timezone.utc), mot_due_date=datetime.datetime(2024, 10, 18, 0, 0, tzinfo=datetime.timezone.utc), tax_due_date=None)",
+  "vehicle_status": "VehicleStatus(type_approval_category=None, euro_status=None, previous_owners=None, has_plate_changes=False, has_colour_changes=False, has_salvage_records=False, has_mileage_anomaly=False, is_exported=False, is_possible_taxi=False, is_stolen=False, has_outstanding_finance=False, has_been_written_off=False, mot_valid=True, tax_valid=None)",
+  "score": "VehicleScore(overall_score=0, age_score=0, mileage_score=0, mot_history_score=0, average_score=0)",
+  "mot_history": [],
+  "market_data": "MarketData(estimated_value=0.0, price_range=(0, 0), days_to_sell=0, similar_listings=0)"
+}
