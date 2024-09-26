@@ -6,10 +6,10 @@ import os
 from dotenv import load_dotenv
 
 # Load environment variables
-load_dotenv(dotenv_path='../.env')
+load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), '..', '.env'))
+
 class MOTHistoryRetriever:
     def __init__(self):
-        
         # API credentials and endpoints
         self.client_id = os.getenv('DVSA_CLIENT_ID')
         self.client_secret = os.getenv('DVSA_CLIENT_SECRET')
@@ -148,7 +148,7 @@ class MOTHistoryRetriever:
 if __name__ == "__main__":
     # Example usage of the MOTHistoryRetriever
     retriever = MOTHistoryRetriever()
-    registration_plate = "AK03 EWW"
+    registration_plate = "PN12BWU"
     mot_history = retriever.fetch_mot_history(registration_plate)
     processed_history = retriever.process_mot_history(mot_history)
     print(json.dumps(processed_history, indent=2))

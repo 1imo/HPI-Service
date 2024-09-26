@@ -1,9 +1,0 @@
-{
-  "vehicle_info": "VehicleInfo(make='AUDI', model='S5', year=2008, series_description='B8', vin='WAUZZZ8T78A034682', registration='SV08HVW', color='Grey', price=8885)",
-  "specifications": "VehicleSpecifications(engine=EngineSpecs(engine_size=4163, power_bhp=354, power_kw=264.0, number_of_cylinders=8, fuel_system='P DI Nat Asp Cat Euro 4', aspiration='Naturally Aspirated', fuel_consumption_l_100km=12.4, fuel_consumption_mpg=22.8, torque_ftlb=324.7, torque_nm=440.0), transmission=TransmissionSpecs(type=None, number_of_gears=6), performance=PerformanceSpecs(top_speed_kph=250, top_speed_mph=155), dimensions=DimensionSpecs(length=4625, height=1362, width=1854, wheel_base=2758, unladen_weight=1685), chassis=ChassisSpecs(drive_type='4x4', driving_axle='All Permanent', number_of_axles=2, doors=2), fuel=FuelSpecs(fuel_type='Petrol', fuel_tank_capacity=63))",
-  "registration_info": "RegistrationInfo(manufacture_date=datetime.datetime(2008, 3, 31, 0, 0, tzinfo=datetime.timezone.utc), first_registration_date=2008, last_v5c_issue_date=2019, mot_due_date=2024, tax_due_date=2024)",
-  "vehicle_status": "VehicleStatus(type_approval_category=None, euro_status=None, co2_emissions=288, average_miles_per_year=5684.0, previous_owners=None, has_plate_changes=False, has_colour_changes=False, has_salvage_records=False, has_mileage_anomaly=False, is_exported=False, is_possible_taxi=False, is_stolen=False, has_outstanding_finance=False, has_been_written_off=False, mot_valid=True, tax_valid=False)",
-  "score": "VehicleScore(overall_score=635, age_score=71, mileage_score=130, mot_history_score=362, average_score=640)",
-  "mot_history": [],
-  "market_data": "MarketData(estimated_value=0.0, price_range=(0, 0), days_to_sell=0, similar_listings=0)"
-}

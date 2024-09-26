@@ -23,13 +23,33 @@ class TotalCarCheck:
         }
 
     def check_vin(self):
-        response = requests.get(self.url, headers=self.headers)
-        return response.json()
+        try:
+            response = requests.get(self.url, headers=self.headers)
+            response.raise_for_status()  # Raises an HTTPError for bad responses
+            print('URL', self.url)
+            print('TCC AUTH COOKIE', os.getenv('TCC_AUTH_COOKIE'))
+            print('User Agent', os.getenv('USER_AGENT'))
+            print('RESPONSE', response.text)
+            return response.json()
+        except Exception as e:
+            print(f"Request error: {str(e)}")
+            return None
+        except ValueError as e:  # includes JSONDecodeError
+            print(f"JSON parsing error: {str(e)}")
+            return None
+        except Exception as e:
+            print(f"Unexpected error in check_vin: {str(e)}")
+            return None
 
 if __name__ == "__main__":
-    vrm = os.getenv('TEST_VRM')
-    vin = os.getenv('TEST_VIN')
-    checker = TotalCarCheck(vrm, vin)
-    response = checker.check_vin()
-    print(f"Status Code: {response.status_code}")
-    print(f"Response Body: {response.text}")
+    try:
+        vrm = os.getenv('TEST_VRM')
+        vin = os.getenv('TEST_VIN')
+        checker = TotalCarCheck(vrm, vin)
+        response = checker.check_vin()
+        if response:
+            print(f"Response Body: {response}")
+        else:
+            print("Failed to get car check information.")
+    except Exception as e:
+        print(f"An error occurred in the main execution: {str(e)}")

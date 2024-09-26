@@ -52,7 +52,7 @@ class AutoTraderAPI:
                 response = requests.post(url, headers=self.headers, cookies=self.cookies, json=payload, impersonate="safari15_5")
                 response.raise_for_status()
                 return response.json()
-            except requests.RequestException as e:
+            except Exception as e:
                 if attempt == max_retries - 1:
                     raise AutoTraderAPIError(f"Request failed after {max_retries} attempts: {str(e)}")
                 time.sleep(retry_delay * (2 ** attempt) + random.uniform(0, 1))
