@@ -67,7 +67,8 @@ class Database:
                 for key, val in value.items():
                     if key not in new_value:
                         new_value[key] = []
-                    if not new_value[key] or new_value[key][-1]['value'] != val:
+                    if not new_value[key] or not isinstance(new_value[key][-1], dict) or \
+                       'value' not in new_value[key][-1] or new_value[key][-1]['value'] != val:
                         new_value[key].append({
                             'value': val,
                             'created_at': current_time

@@ -65,6 +65,7 @@ class Logger:
                     INSERT INTO logs (timestamp, file, line_number, method_name, message)
                     VALUES (?, ?, ?, ?, ?)
                 ''', (timestamp, file_path, line_number, method_name, message))
+            print(message)
         else:
             print(log_entry)
 
@@ -86,14 +87,14 @@ def simulate_function():
         raise  # Re-raise the exception after logging
 
 def test_logger():
-    logger.write("Starting the test")
+    print("Starting the test")
     
     try:
         simulate_function()
     except Exception as e:
         logger.write(f"Caught an exception: {str(e)}")
     
-    logger.write("Test completed")
+    print.write("Test completed")
     
     print("\nExceptions logged to database:")
     all_logs = logger.read_all()
